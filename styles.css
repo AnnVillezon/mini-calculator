@@ -1,0 +1,70 @@
+/* Universal styles for all elements, before, and after pseudo-elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+/* Styling for the body, including a new gradient background */
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #6a8d92, #72608b, #83a599);
+}
+
+/* Grid layout for the calculator container */
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 90px);
+}
+
+/* Button styling inside the calculator grid */
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid #f0f0f0;
+    outline: none;
+    background-color: rgba(240, 240, 240, 0.8);
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.calculator-grid > button:hover {
+    background-color: rgba(240, 240, 240, 1);
+}
+
+/* Span two columns class */
+.span-two {
+    grid-column: span 2;
+}
+
+/* Output display area styling */
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(30, 30, 30, 0.9);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 15px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Styling for the previous operand text */
+.output .previous-operand {
+    color: rgba(200, 200, 200, 0.75);
+    font-size: 1.3rem;
+}
+
+/* Styling for the current operand text */
+.output .current-operand {
+    color: #fff;
+    font-size: 2.3rem;
+}
