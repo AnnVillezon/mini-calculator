@@ -1,0 +1,2 @@
+# mini-calculator
+school project
